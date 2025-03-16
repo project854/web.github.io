@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes</title>
+    <style> 
+        body {
+            text-align: center;
+            background-color: black;
+            background-size: cover;
+           
+            transition: background 0.5s ease-in-out;
+        }
+        #menu {
+            margin-top: 100px;
+        }
+        .btn {
+            font-size: 24px;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        #pizza-btn { background-color: red; }
+        #crepe-btn { background-color: chocolate; }
+        .content { display: none; }
+        
+        
+        h1 {
+            color: red;
+            font-family: Segoe Print;
+            font-size: 50px;
+            text-decoration: underline;
+            text-align: center;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: transform 1s ease-out, opacity 1s ease-in;
+        }
+        h1.animate-title {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        h2 { color:white; font-family: Arial Black; font-size: 30px; background-color: green; width: 200px }
+        h3 { color: green; font-size: 25px;text-align:left; }
+        h4 { color:white; font-family: Arial; font-size: 30px; background-color: red; width: 200px; }
+        
+        ul { margin-left: 20px; font-family: Segoe UI; color: white; }
+        ol { font-family: Times New Roman; font-size: 20px; color: black; background-color: rgb(189, 112, 57); width: 400px; }
+		i { text-align:left;}
+		#info  { text-align:left;}
+    </style>
+</head>
+<body>
+
+    
+    <div id="menu">
+        <h1>Choisissez une recette</h1>
+        <button id="pizza-btn" class="btn" onclick="showRecipe('pizza')">🍕 Pizza</button>
+        <button id="crepe-btn" class="btn" onclick="showRecipe('crepe')">🥞 Crêpe</button>
+    </div>
+
+    
+    <div id="pizza" class="content">
+        <h1 id="pizza-title">Recette de Pizza Végétarienne</h1>
+        <h2>Ingrédients</h2>
+        <h3>Pour la pâte :</h3>
+        <ul>
+            <i>
+                <li>250 g de farine</li>
+                <li>1 cuillère à café de sel</li>
+                <li>1 sachet de levure boulangère (ou 8 g de levure fraîche)</li>
+                <li>150 ml d'eau tiède</li>
+                <li>1 cuillère à soupe d'huile d'olive</li>
+            </i>
+        </ul>
+        
+        <h3>Pour la garniture :</h3>
+        <ul>
+            <i>
+                <li>200 g de sauce tomate</li>
+                <li>150 g de mozzarella râpée</li>
+                <li>1/2 poivron rouge, coupé en lanières</li>
+                <li>1/2 poivron jaune, coupé en lanières</li>
+                <li>1 courgette, coupée en fines rondelles</li>
+                <li>6 champignons frais, émincés</li>
+                <li>1 poignée de roquette (facultatif)</li>
+                <li>Olives noires (facultatif)</li>
+                <li>1 cuillère à café d'origan séché</li>
+                <li>Sel et poivre, au goût</li>
+            </i>
+        </ul>
+
+        <h2>Préparation</h2>
+        <ol>
+            <li>Préparer la pâte : Mélanger la levure avec l'eau tiède et laisser reposer 5 minutes.</li>
+            <li>Dans un grand saladier, mélanger la farine et le sel. Ajouter l'eau et l'huile d'olive.</li>
+            <li>Pétrir la pâte pendant environ 8 à 10 minutes jusqu'à ce qu'elle soit lisse et élastique.</li>
+            <li>Former une boule, couvrir d'un torchon propre et laisser lever 1 heure dans un endroit chaud.</li>
+            <li>Préchauffer le four à 220°C (chaleur tournante). Placer une plaque ou une pierre à pizza dans le four.</li>
+            <li>Préparer la garniture en lavant et coupant les légumes en fines tranches.</li>
+            <li>Étaler la pâte sur une surface farinée et la placer sur du papier cuisson.</li>
+            <li>Assembler la pizza en étalant la sauce tomate, en ajoutant la mozzarella et les légumes.</li>
+            <li>Assaisonner avec l'origan, le sel et un filet d'huile d'olive.</li>
+            <li>Cuire la pizza pendant 12 à 15 minutes jusqu'à ce que la pâte soit dorée et croustillante.</li>
+            <li>Sortir la pizza du four, ajouter la roquette si désiré, couper en parts et servir immédiatement.</li>
+        </ol>
+		<div id="info">
+                <h4>Informations</h4>
+                <p style="background-color: blue; width: 200px;" >Voici les détails de la recette :</p>
+                <ul>
+                    <li>🌿 Recette : Pizza végétarienne</li>
+                    <li>⏳ Temps de préparation : 15 minutes</li>
+                    <li>🍕 Temps de cuisson : 15 minutes</li>
+                    <li>👨‍🍳 Niveau : Facile</li>
+                </ul>
+    </div>
+</div>
+    
+    <div id="crepe" class="content">
+        <h1 id="crepe-title">Recette de Crêpes</h1>
+        <h2>Ingrédients</h2>
+        <ul>
+            <i>
+                <li>250 g de farine</li>
+                <li>500 ml de lait</li>
+                <li>3 œufs</li>
+                <li>2 cuillères à soupe de sucre</li>
+                <li>1 pincée de sel</li>
+                <li>50 g de beurre fondu</li>
+                <li>1 cuillère à café d'extrait de vanille</li>
+            </i>
+        </ul>
+
+        <h2>Préparation</h2>
+        <ol>
+            <li>Dans un saladier, mélanger la farine, le sucre et le sel.</li>
+            <li>Ajouter les œufs et bien mélanger.</li>
+            <li>Verser le lait progressivement tout en fouettant.</li>
+            <li>Ajouter le beurre fondu et la vanille.</li>
+            <li>Laisser reposer 30 minutes.</li>
+            <li>Faire chauffer une poêle et cuire chaque crêpe quelques minutes.</li>
+            <li>Servir avec du sucre, du chocolat ou des fruits.</li>
+        </ol>
+    </div>
+
+    <script>
+        function showRecipe(type) {
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("pizza").style.display = "none";
+            document.getElementById("crepe").style.display = "none";
+
+            document.getElementById(type).style.display = "block";
+
+            let backgroundImage = type === "pizza" ? "url('pizza.jfif')" : "url('crepe.JFIF')";
+            document.body.style.backgroundImage = backgroundImage;
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "left";
+
+            let title = document.getElementById(type + "-title");
+            title.classList.remove("animate-title");
+            setTimeout(() => {
+                title.classList.add("animate-title");
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
